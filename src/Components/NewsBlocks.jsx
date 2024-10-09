@@ -8,9 +8,7 @@ const NewsBlocks = ({ category }) => {
   useEffect(() => {
     const fetchArticles = async () => {
       setLoading(true);
-      const url = `${
-        import.meta.env.VITE_API_URL
-      }?country=us&category=${category}&apiKey=${import.meta.env.VITE_API_KEY}`;
+      const url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=5e646a81f2374d60888bfadafdaceb91`;
 
       try {
         const response = await fetch(url);
