@@ -4,11 +4,13 @@ import NewsBlocks from "./Components/NewsBlocks";
 // import NewsPage from "./Components/NewsPage";
 
 const App = () => {
- const[category , setcategory]= useState("general")
+  const [category, setcategory] = useState("top");
+
+  console.log(category);
   return (
     <div>
-      <Navbar setcategory = {setcategory}/>
-      <NewsBlocks category ={category} />
+      <Navbar setcategory={setcategory} />
+      <NewsBlocks category={category} />
       {/* <NewsPage /> */}
     </div>
   );
