@@ -2,12 +2,12 @@ const Navbar = ({ setcategory }) => {
   return (
     <div>
       <nav
-        className="navbar navbar-expand-lg bg-body-tertiary"
+        className="navbar navbar-expand-lg bg-body-tertiary cursor-pointer"
         data-bs-theme="dark"
       >
-        <div className="container-fluid">
+        <div className="container-fluid cursor-pointer">
           <a className="navbar-brand" href="#">
-            <span className="badge text-bg-secondary fs-5">Navbar</span>
+            <span className="badge text-bg-secondary fs-5">NewsApp</span>
           </a>
           <button
             className="navbar-toggler"
@@ -52,6 +52,13 @@ const Navbar = ({ setcategory }) => {
                 </div>
               </li>
               <li className="nav-item">
+                <div
+                  className="nav-link"
+                  onClick={() => setcategory("business")}>  
+                  Business
+                </div>
+              </li>
+              <li className="nav-item cursor-pointer">
                 <div className="nav-link" onClick={() => setcategory("sports")}>
                   Sports
                 </div>

@@ -12,11 +12,11 @@ const debounce = (func, delay) => {
   };
 };
 
+// eslint-disable-next-line react/prop-types
 const NewsBlocks = ({ category }) => {
   const [newsData, setNewsData] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true); // Add loading state
-
   const fetchNewsData = async (retryCount = 0) => {
     try {
       const response = await fetch(
